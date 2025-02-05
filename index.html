@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://v8.js-dos.com/latest/js-dos.css">
+    <script src="https://v8.js-dos.com/latest/js-dos.js"></script>
+</head>
+<body>
+    <div class="sidemenu">
+        <div class="sidemenu-hook"></div>
+        <ul class="sidemenu-list">
+            <li class="sidemenu-item" data-title="doom" data-src="./bundles/doom.jsdos">Doom</li>
+            <li class="sidemenu-item" data-title="civilization" data-src="./bundles/civilization.jsdos">Civilization I</li>
+        </ul>
+    </div>
+    
+    <div id="dos"></div>
+    <script>
+        const sidemenu = document.querySelector(".sidemenu"),
+            sidemenuHook = document.querySelector(".sidemenu-hook"),
+            sidemenuItems = document.querySelectorAll(".sidemenu-item"),
+            dos = document.querySelector("#dos");
+
+        sidemenuHook.onclick = () => sidemenu.classList.toggle("sidemenu--hidden");
+
+        sidemenuItems.forEach(item => {
+            item.onclick = (e) => {
+                let src = item.getAttribute("data-src");
+                sidemenu.classList.add("sidemenu--hidden");
+                dos.style.display = "block";
+                Dos(dos, { url: src });
+            }
+        })
+        </script>
+</body>
+</html>
