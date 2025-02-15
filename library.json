@@ -1,0 +1,44 @@
+[
+    {
+        "title": "Civilization 1",
+        "src": "./assets/bundles/civilization.jsdos",
+        "iconSrc": "./assets/icons/civilization.png",
+        "iconAlt": "civilization"
+    },
+    {
+        "title": "Doom",
+        "src": "./assets/bundles/doom.jsdos",
+        "iconSrc": "./assets/icons/doom.png",
+        "iconAlt": "doom"
+    },
+    {
+        "title": "Doom 2",
+        "src": "./assets/bundles/doom2.jsdos",
+        "iconSrc": "./assets/icons/doom2.png",
+        "iconAlt": "doom2"
+    },
+    {
+        "title": "Duke Nukem 3D",
+        "src": "./assets/bundles/dukenukem.jsdos",
+        "iconSrc": "./assets/icons/dukenukem.png",
+        "iconAlt": "dukenukem"
+    },
+    {
+        "title": "Red Baron",
+        "src": "./assets/bundles/redbaron.jsdos",
+        "iconSrc": null,
+        "iconAlt": "redbaron"
+    },
+    {
+        "title": "Wolfenstein 3D",
+        "src": "./assets/bundles/wolfenstein.jsdos",
+        "iconSrc": "./assets/icons/wolfenstein.png",
+        "iconAlt": "redbaron"
+    },
+    {
+        "title": "XCOM: UFO defense",
+        "src": "./assets/bundles/xcom.jsdos",
+        "iconSrc": "./assets/icons/xcom.png",
+        "iconAlt": "xcom"
+    }
+]

@@ -7,38 +7,43 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://v8.js-dos.com/latest/js-dos.css">
     <script src="https://v8.js-dos.com/latest/js-dos.js"></script>
+    <script src="./script.js" defer></script>
 </head>
 <body>
     <div class="sidemenu">
         <div class="sidemenu-hook"></div>
-        <ul class="sidemenu-list">
-            <li class="sidemenu-item" data-title="civilization" data-src="./bundles/civilization.jsdos">Civilization I</li>
-            <li class="sidemenu-item" data-title="doom" data-src="./bundles/doom.jsdos">Doom</li>
-            <li class="sidemenu-item" data-title="doom2" data-src="./bundles/doom2.jsdos">Doom 2</li>
-            <li class="sidemenu-item" data-title="dukenukem" data-src="./bundles/dukenukem.jsdos">Duke Nukem 3D</li>
-            <li class="sidemenu-item" data-title="redbaron" data-src="./bundles/redbaron.jsdos">Red Baron</li>
-            <li class="sidemenu-item" data-title="wolf3d" data-src="./bundles/wolf3d.jsdos">Wolfenstein 3d</li>
-            <li class="sidemenu-item" data-title="xcom" data-src="./bundles/xcom.jsdos">XCOM: UFO defence</li>
-        </ul>
+        <div class="sidemenu-items-wrapper">
+            <div class="sidemenu-item" data-title="civilization" data-src="./assets/bundles/civilization.jsdos">
+                <img class="sidemenu-item__icon" src="./assets/icons/civilization.png" alt="civilization">
+                <h3 class="sidemenu-item__title">Civilization 1</h3>
+            </div>
+            <div class="sidemenu-item" data-title="doom" data-src="./assets/bundles/doom.jsdos">
+                <img class="sidemenu-item__icon" src="./assets/icons/doom.png" alt="doom">
+                <h3 class="sidemenu-item__title">Doom</h3>
+            </div>
+            <div class="sidemenu-item" data-title="doom2" data-src="./assets/bundles/doom2.jsdos">
+                <img class="sidemenu-item__icon" src="./assets/icons/doom2.png" alt="doom 2">
+                <h3 class="sidemenu-item__title">Doom</h3>
+            </div>
+            <div class="sidemenu-item" data-title="dukenukem" data-src="./assets/bundles/dukenukem.jsdos">
+                <img class="sidemenu-item__icon" src="./assets/icons/dukenukem.png" alt="duke nukem 3d">
+                <h3 class="sidemenu-item__title">Duke Nukem 3D</h3>
+            </div>
+            <div class="sidemenu-item" data-title="redbaron" data-src="./assets/bundles/redbaron.jsdos">
+                <img class="sidemenu-item__icon" src="./assets/icons/msdos.png" alt="redbaron">
+                <h3 class="sidemenu-item__title">Red Baron</h3>
+            </div>
+            <div class="sidemenu-item" data-title="wolf3d" data-src="./assets/bundles/wolf3d.jsdos">
+                <img class="sidemenu-item__icon" src="./assets/icons/wolfenstein.png" alt="wolfenstein">
+                <h3 class="sidemenu-item__title">Wolfenstein 3d</h3>
+            </div>
+            <div class="sidemenu-item" data-title="xcom" data-src="./assets/bundles/xcom.jsdos">
+                <img class="sidemenu-item__icon" src="./assets/icons/xcom.png" alt="xcom">
+                <h3 class="sidemenu-item__title">XCOM: UFO defence</h3>
+            </div>
+        </div>
     </div>
     
     <div id="dos"></div>
-    <script>
-        const sidemenu = document.querySelector(".sidemenu"),
-            sidemenuHook = document.querySelector(".sidemenu-hook"),
-            sidemenuItems = document.querySelectorAll(".sidemenu-item"),
-            dos = document.querySelector("#dos");
-
-        sidemenuHook.onclick = () => sidemenu.classList.toggle("sidemenu--hidden");
-
-        sidemenuItems.forEach(item => {
-            item.onclick = (e) => {
-                let src = item.getAttribute("data-src");
-                sidemenu.classList.add("sidemenu--hidden");
-                dos.style.display = "block";
-                Dos(dos, { url: src });
-            }
-        })
-        </script>
 </body>
 </html>
