@@ -20,7 +20,7 @@ body {
     width: 20vw;
     display: flex;
     justify-content: space-between;
-    background: #c0c0c0;
+    background: #eceded;
     z-index: 100;
     transition: .2s ease;
 }
@@ -70,7 +70,7 @@ body {
 .sidemenu-hook {
     width: 15px;
     height: 100%;
-    background: #4b4b4b;
+    background: #1f2937;
     cursor: pointer;
 }
 
